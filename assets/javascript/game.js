@@ -17,17 +17,18 @@ $("#valuetotal").html(`Number to guess : ` + total);
 //I have to use var in this for loop. I tried to use const and
 //it did not work.
 
-for (var i = 0; i < 4; i++) {
-    var crystalRandom = [
-        Math.round(Math.random() * 12),
-        Math.round(Math.random() * 12),
-        Math.round(Math.random() * 12),
-        Math.round(Math.random() * 12)
-    ];
-    console.log(crystalRandom);
+//for (var i = 0; i < 4; i++) {
+//console.log(crystalRandom);
 
-    //console.log(Array);
-}
+//console.log(Array);
+//}
+
+var crystalRandom = [
+    Math.round(Math.random() * 12),
+    Math.round(Math.random() * 12),
+    Math.round(Math.random() * 12),
+    Math.round(Math.random() * 12)
+];
 
 //console.log(cR2);
 //cR2 = append[crystalRandom];
@@ -48,3 +49,17 @@ $(".valuestone3").html(`crystalValue : ` + crystalRandom[3]);
 //$("#valuestone2").html(`Value of stone2 : ` + crystalRandom);
 //$("#valuestone3").html(`Value of stone3 : ` + crystalRandom);
 //$("#valuestone4").html(`Value of stone4 : ` + crystalRandom);
+
+//var totalUser = value of all crystals clicked.
+
+//$("#valuestone1").click(function() {
+//  $(".valuestone0").html(`crystalValue : ` + crystalRandom[0]);
+//});
+
+$("#hide").click(function() {
+    $("p").hide();
+});
+
+$("#show").click(function() {
+    $("p").show();
+});
