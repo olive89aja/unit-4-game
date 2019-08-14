@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!--Link to Google CDN-->
 
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
+<!--NEED TO MAKE SURE THIS IS CLEAN DOWN THE ROAD-->
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!--need to check links to css stylesheets : regular and reset-->
 
-    <title>Crystal game, have fun guessing and calculating</title>
+</head>
+
+<title>Crystal game, have fun guessing and calculating</title>
 </head>
 
 <body>
+
     <p id="valuetotal"></p>
 
-    <div id="stones">
-        CRYSTALS
-        <br />
-        <br />
+    <p id="Wins"></p>
 
-        <div class="stone valuestone0">
-            <button class="valuecrystal">STONE1</button>
-        </div>
-        <div class="stone valuestone1"><button>STONE2</button></div>
-        <div class="stone valuestone2"><button>STONE3</button></div>
-        <div class="stone valuestone3"><button>STONE4</button></div>
-    </div>
+    <p id="Losses"></p>
 
-    <script src="assets/javascript/game.js">
-        //Step 1.  HTML for the first half og the page. Crystals Collector + comments.
+    <p id="totalGuessed"></p>
 
-        //Step 2. Random number generator for the total [0,100]
+    <div id="crystals">
+        <!--<img class="crystal-image" src="https://i.ibb.co/Qrch9YB/crystalx.jpg" data-crystalvalue />
+        <img class="crystal-image" src="https://i.ibb.co/2cgG764/crystalx2.jpg" data-crystalvalue />
+        <img class="crystal-image" src="https://i.ibb.co/q0H13Vj/crystalx3.jpg" data-crystalvalue />
+        <img class="crystal-image" src="https://i.ibb.co/Pwb6pSH/crystalx4.jpg" data-crystalvalue />
+    </div>-->
 
-        //Step 3. Random number generator for each Crystal.
+        <!--<button class="btn" id="show1">Crystal1</button>
+        <button class="btn" id="show2">Crystal2</button>
+        <button class="btn" id="show3">Crystal3</button>
+        <button class="btn" id="show4">Crystal4</button>-->
 
-        //Step 4. Your total score is :
+        <!-- <div class="stone valuestone0"></div>
+        <div class="stone valuestone1"></div>
+        <div class="stone valuestone2"></div>
+        <div class="stone valuestone3"></div>-->
 
-        //Step 5. Wins and Losses.
+        <script src="assets/javascript/game.js">
+            //Step 1.  HTML for the first half og the page. Crystals Collector + comments.
 
-        //Step 6. Make sure the game restarts to new random number and new Crystal numbers.
-    </script>
+            //Step 2. Random number generator for the total [0,100]
+
+            //Step 3. Random number generator for each Crystal.
+
+            //Step 4. Your total score is :
+
+            //Step 5. Wins and Losses.
+
+            //Step 6. Make sure the game restarts to new random number and new Crystal numbers.
+        </script>
 </body>
 
 </html>

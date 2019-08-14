@@ -1,0 +1,23 @@
+.crystal-image:nth-of-type(1) {
+    content: url("https://i.ibb.co/Qrch9YB/crystalx.jpg");
+    width: 200px;
+    height: 200px;
+}
+
+.crystal-image:nth-of-type(2) {
+    content: url("https://i.ibb.co/2cgG764/crystalx2.jpg");
+    width: 200px;
+    height: 200px;
+}
+
+.crystal-image:nth-of-type(3) {
+    content: url("https://i.ibb.co/q0H13Vj/crystalx3.jpg");
+    width: 200px;
+    height: 200px;
+}
+
+.crystal-image:nth-of-type(4) {
+    content: url("https://i.ibb.co/Pwb6pSH/crystalx4.jpg");
+    width: 200px;
+    height: 200px;
+}
