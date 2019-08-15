@@ -1,3 +1,20 @@
+h2 {
+    background-color: orange;
+    color: white;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.game-instructions {
+    background-color: bisque;
+    width: 300px;
+    height: 300px;
+}
+
+
+/*We use :nth-of-type, a pseudo-class selector to make sure that each element with a crystal-image class has a different image to display. */
+
 .crystal-image:nth-of-type(1) {
     content: url("https://i.ibb.co/Qrch9YB/crystalx.jpg");
     width: 200px;
