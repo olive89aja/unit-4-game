@@ -5,7 +5,7 @@
 <!--NEED TO MAKE SURE THIS IS CLEAN DOWN THE ROAD-->
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <meta charset="UTF-8" />
@@ -19,10 +19,14 @@
 </head>
 
 <body>
+
+
     <h2 class="game-title">CrystalsCollector</h2>
 
     <p class="game-instructions">You will be given a random number at the start of the game. <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. <br> You win the game by matching your total score to random number,
-        you lose the game if your total socre goes above the random number. <br> The value of each crystal is hidden from you until you click on it.<br> Each time when the game starts, the game will change the value of each crystal.<br>
+        you lose the game if your total socre goes above the random number. <br> The value of each crystal is hidden from you until you click on it.<br> Each time when the game starts, the game will change the value of each crystal.<br><br><br>
+
+        <!--button class="newnumber">NEW NUMBER TO GUESS</button>-->
     </p>
     <p id="valuetotal"></p>
 
@@ -33,21 +37,6 @@
     <p id="totalGuessed"></p>
 
     <div id="crystals">
-        <!--<img class="crystal-image" src="https://i.ibb.co/Qrch9YB/crystalx.jpg" data-crystalvalue />
-        <img class="crystal-image" src="https://i.ibb.co/2cgG764/crystalx2.jpg" data-crystalvalue />
-        <img class="crystal-image" src="https://i.ibb.co/q0H13Vj/crystalx3.jpg" data-crystalvalue />
-        <img class="crystal-image" src="https://i.ibb.co/Pwb6pSH/crystalx4.jpg" data-crystalvalue />
-    </div>-->
-
-        <!--<button class="btn" id="show1">Crystal1</button>
-        <button class="btn" id="show2">Crystal2</button>
-        <button class="btn" id="show3">Crystal3</button>
-        <button class="btn" id="show4">Crystal4</button>-->
-
-        <!-- <div class="stone valuestone0"></div>
-        <div class="stone valuestone1"></div>
-        <div class="stone valuestone2"></div>
-        <div class="stone valuestone3"></div>-->
 
         <script src="assets/javascript/game.js">
             //Step 1.  HTML for the first half og the page. Crystals Collector + comments.

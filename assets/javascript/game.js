@@ -1,4 +1,5 @@
-//Let's define the number to guess with a function. We use getRandomInt with a specified interval (19,120)
+newGame();
+
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -9,6 +10,7 @@ var total = getRandomInt(19, 120);
 console.log(total);
 
 
+
 //We display the number using the <p> id. 
 
 $("#valuetotal").html(`Number to guess : ` + total);
@@ -17,10 +19,10 @@ $("#valuetotal").html(`Number to guess : ` + total);
 //Let's create a var which is also an array to store 4 random numbers between 1 and 12. 
 
 var crystalRandom = [
-    Math.floor(Math.random() * 12),
-    Math.floor(Math.random() * 12),
-    Math.floor(Math.random() * 12),
-    Math.floor(Math.random() * 12)
+    Math.floor(Math.random() * 12 + 1),
+    Math.floor(Math.random() * 12 + 1),
+    Math.floor(Math.random() * 12 + 1),
+    Math.floor(Math.random() * 12 + 1)
 ];
 
 console.log(crystalRandom);
@@ -28,9 +30,7 @@ console.log(crystalRandom);
 
 //We initilalize 3 variables that we will need in the game. 
 
-let counter = 0;
-let Wins = 0;
-let Losses = 0;
+
 
 //This for loop is directly inspired from the simpler crystal game done in class. 
 
@@ -64,6 +64,9 @@ for (let i = 0; i < crystalRandom.length; i++) {
 $(".crystal-image").on("click", function() {
 
 
+
+
+
     var crystalValue = $(this).attr("data-crystalvalue");
     crystalValue = parseInt(crystalValue);
 
@@ -75,12 +78,13 @@ $(".crystal-image").on("click", function() {
     //We set conditions to make sure the game is won or lost. Also we reassign 0 to counter in both cases so that the game starts again. 
 
     if (counter === total) {
-        $("#Wins").html(`Wins : ` + Wins + 1);
+        $("#Wins").html(`Wins : ` + Wins++);
         counter = 0;
 
 
-    } else if (counter >= total) {
-        $("#Losses").html(`Losses : ` + Losses + 1);
+
+    } else if (counter > total) {
+        $("#Losses").html(`Losses : ` + Losses++);
         counter = 0;
 
 
@@ -88,3 +92,13 @@ $(".crystal-image").on("click", function() {
     }
 
 });
+
+function newGame() {
+
+    total = 0;
+    counter = 0;
+    crystalRandom = 0;
+    crystalValue = 0;
+    Wins = 0;
+    Losses = 0;
+}
