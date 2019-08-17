@@ -1,22 +1,29 @@
+
+let wins = 0;
+let losses = 0;
+let total=0;
+let counter = 0;
+let crystalRandom = 0;
+let crystalValue = 0;
+
 newGame();
-
-
+newCrystals();
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-
-var total = getRandomInt(19, 120);
-console.log(total);
-
-
+function newGame() {
+    
+total = getRandomInt(19, 120);
+console.log("this is the total",total);
 
 //We display the number using the <p> id. 
 
 $("#valuetotal").html(`Number to guess : ` + total);
-
+}
 
 //Let's create a var which is also an array to store 4 random numbers between 1 and 12. 
+
+function newCrystals() {
 
 var crystalRandom = [
     Math.floor(Math.random() * 12 + 1),
@@ -57,9 +64,12 @@ for (let i = 0; i < crystalRandom.length; i++) {
     // Let's add each image to the page.
     $("#crystals").append(imageCrystal);
 }
-
+}
 // As soon as the user clicks on one of the crystals, it runs a function that is going to accumulate point values for crystals 
 //and determine if the game is lost or won.
+
+
+
 
 $(".crystal-image").on("click", function() {
 
@@ -71,6 +81,7 @@ $(".crystal-image").on("click", function() {
     crystalValue = parseInt(crystalValue);
 
     counter += crystalValue;
+    console.log(counter)
 
     // All of the same game win-lose logic applies. So the rest remains unchanged.
     $("#totalGuessed").html("New score: " + counter);
@@ -78,27 +89,22 @@ $(".crystal-image").on("click", function() {
     //We set conditions to make sure the game is won or lost. Also we reassign 0 to counter in both cases so that the game starts again. 
 
     if (counter === total) {
-        $("#Wins").html(`Wins : ` + Wins++);
+        wins++
+        $("#Wins").html(`Wins : ` +wins );
         counter = 0;
-
+        newGame();
+        newCrystals();
 
 
     } else if (counter > total) {
-        $("#Losses").html(`Losses : ` + Losses++);
+        losses++
+        $("#Losses").html(`Losses : ` +losses );
         counter = 0;
-
+        newGame();
+        newCrystals();
 
 
     }
 
 });
 
-function newGame() {
-
-    total = 0;
-    counter = 0;
-    crystalRandom = 0;
-    crystalValue = 0;
-    Wins = 0;
-    Losses = 0;
-}
