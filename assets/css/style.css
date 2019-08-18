@@ -38,3 +38,7 @@ h2 {
     width: 200px;
     height: 200px;
 }
+
+.crystal-image:nth-child(n+5) {
+    display: none;   
+}

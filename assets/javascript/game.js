@@ -47,8 +47,11 @@ console.log(crystalRandom);
 
 for (let i = 0; i < crystalRandom.length; i++) {
     // For each iteration, we will create an imageCrystal
-    var imageCrystal = $("<img>");
+   
+    
+    var imageCrystal = $("<img>")
 
+    
     // We attribute the same class ".crystal-image" to each element created.
 
     imageCrystal.addClass("crystal-image");
@@ -63,7 +66,10 @@ for (let i = 0; i < crystalRandom.length; i++) {
 
     // Let's add each image to the page.
     $("#crystals").append(imageCrystal);
+    
+
 }
+
 }
 // As soon as the user clicks on one of the crystals, it runs a function that is going to accumulate point values for crystals 
 //and determine if the game is lost or won.
@@ -73,13 +79,13 @@ for (let i = 0; i < crystalRandom.length; i++) {
 
 $(".crystal-image").on("click", function() {
 
-
-
+  
+    
 
 
     var crystalValue = $(this).attr("data-crystalvalue");
     crystalValue = parseInt(crystalValue);
-
+    
     counter += crystalValue;
     console.log(counter)
 
@@ -92,9 +98,10 @@ $(".crystal-image").on("click", function() {
         wins++
         $("#Wins").html(`Wins : ` +wins );
         counter = 0;
-        newGame();
+        newGame(); 
         newCrystals();
-
+           
+        
 
     } else if (counter > total) {
         losses++
@@ -102,9 +109,8 @@ $(".crystal-image").on("click", function() {
         counter = 0;
         newGame();
         newCrystals();
-
+          
 
     }
 
 });
-
